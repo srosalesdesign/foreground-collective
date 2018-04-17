@@ -1,0 +1,18 @@
+/* Color classes (modify as needed) */
+
+$colors: "fgreen" $fgreen, "fblue" $fblue, "fmagenta" $fmagenta, "teal" $teal, "green" $green, "olive" $olive, "lime" $lime, "yellow" 
+$yellow, "orange" $orange, "red" $red, "fuchsia" $fuchsia, "purple" $purple, "maroon" $maroon, "white" $white, "gray" $gray, "silver" $silver, "black" $black;
+
+
+@each $color in $colors {
+  $label: nth($color, 1);
+  $value: nth($color, 2);
+
+  .#{$label} {
+    color: $value;
+  }
+
+  .#{$label}-bg {
+    background-color: $value;
+  }
+}
